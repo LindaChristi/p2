@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Lenda de Korra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>A Lenda de Korra</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Introdução</a></li>
+                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#episodios">Episódios</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Página Inicial -->
+        <main>
+            <section class="home">
+                <div class="left-section">
+                    <div class="logo">
+                        <img src="imagens/logo/pngegg.png" alt="Logo A Lenda de Korra">
+                    </div>
+                    <div class="synopsis">
+                        <p>
+                            A Lenda de Korra é a emocionante continuação de Avatar: A Lenda de Aang, trazendo 
+                            as aventuras de Korra, uma Avatar destemida, enfrentando desafios para restaurar a 
+                            paz no mundo.
+                        </p>
+                        <a href="#personagens" class="btn-start">Começar Jornada</a>
+                    </div>
+                </div>
+                <div class="korra-img">
+                    <img src="imagens/KorraHome.png" alt="Imagem de Korra">
+                </div>
+            </section>
+
+            <!-- Seção de Personagens -->
+            <section id="personagens" class="center-section">
+                <h2>Personagens</h2>
+                <div class="characters">
+                    <div class="character" onclick="openModal('korra')">
+                        <img src="imagens/personagens/korrapers.jpeg" alt="Korra">
+                        <h3>Korra</h3>
+                        <p>Avatar atual,</p>
+                        <p>lutando para equilibrar o mundo.</p>
+                    </div>
+                    <div class="character" onclick="openModal('Asami')">
+                        <img src="imagens/personagens/asamipers.jpeg" alt="Asami">
+                        <h3>Asami</h3>
+                        <p>Uma engenheira brilhante e</p>
+                        <p>aliada leal de Korra.</p>
+                    </div>
+                    <div class="character" onclick="openModal('Mako')">
+                        <img src="imagens/personagens/makopers.jpeg" alt="Mako">
+                        <h3>Mako</h3>
+                        <p>Mestre do fogo.</p>
+                    </div>
+                    <div class="character" onclick="openModal('Bolin')">
+                        <img src="imagens/personagens/bolinpers.jpeg" alt="Bolin">
+                        <h3>Bolin</h3>
+                        <p>Mestre da rocha.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal para informações detalhadas -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-img" src="" alt="Imagem do personagem">
+                <h3 id="modal-name"></h3>
+                <p id="modal-description"></p>
+                <button class="btn-close" onclick="closeModal()">Voltar à galeria</button>
+            </div>
+        </div>
+        <!-- Seção de Episódios Favoritos -->
+<section id="episodios" class="center-section">
+    <h2>Episódios Favoritos</h2>
+    <div class="episodios-list">
+        <div class="episodio" onclick="openTrailer('trailer1')">
+            <img src="imagens/personagens/modal/modalep/LótusVermelha.jpeg" alt="Episódio 1">
+            <h3>Livro 3: Mudança, 11. O últimato</h3>
+            <p>Ba Sing Se está um tumulto. Mako e Bolin precisam encontar Korra e Asami no deserto de 
+            Si Wong e avisar a Tenzin sobre os planos de Lótus Vermelho.</p>
+        </div>
+        <div class="episodio" onclick="openTrailer('trailer2')">
+            <img src="imagens/personagens/modal/modalep/KorraAndVatuu.jpeg" alt="Episódio 2">
+            <h3>Livro 2: Espíritos, 14. Luz no Escuro</h3>
+            <p>Depois de se recuperar do ataque de Unalaq, Korra descobre uma forma 
+            de derrotar o imenso espírito do mal e salvar o mundo.</p>
+        </div>
+        <div class="episodio" onclick="openTrailer('trailer3')">
+            <img src="imagens/personagens/modal/modalep/KorraAndKuvira.jpeg" alt="Episódio 3">
+            <h3>Livro 4: Equilíbrio, 13. O ponto final</h3>
+            <p>Korra e a equipe Avatar se unem numa batalha final contra Kuvira e restabelecem a paz na República Unida.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal de Trailer -->
+<div id="trailer-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeTrailer()">&times;</span>
+        <iframe id="trailer-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Seção de Galeria -->
+<section id="galeria" class="center-section">
+    <h2>Galeria</h2>
+    <div class="gallery-carousel">
+        <button class="nav left" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <img src="imagens/galeria/korraEasami.jpeg" alt="Imagem 1">
+                <div class="info">Uma das primeiras animações a colocar uma protagonista LGBT.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/KorraeMako.jpeg" alt="Imagem 2">
+                <div class="info">Sim, o Mako namorou a Asami e a Korra e no final elas ficaram juntas e ele de escanteio kkkkkk.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/LinAndTenzin.jpg" alt="Imagem 3">
+                <div class="info">Lin e Tenzin,únicos treinadores que suportam a Korra.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/estadoavatar.jpeg" alt="Imagem 4">
+                <div class="info">Estado Avatar da Korra.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/espirítodapaz.jpg" alt="Imagem 5">
+                <div class="info">Espírito da paz que sempre volta junto com o Avatar para lutar contra Vatuu.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/doguinhokorra.jpg" alt="Imagem 6">
+                <div class="info">"Cachorrinho" da Korra.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/galeria/equipeavatar.jpg" alt="Imagem 7">
+                <div class="info">A equipe mais maravilhosa.</div>
+            </div>
+        </div>
+        <button class="nav right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+
+
+<!-- Seção de Contato -->
+<section id="contato">
+    <h2>Contato</h2>
+    <div class="contact-form">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <textarea id="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="success-message" id="success-message">
+            Obrigado por entrar em contato! Responderemos em breve.
+        </div>
+    </div>
+</section>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
